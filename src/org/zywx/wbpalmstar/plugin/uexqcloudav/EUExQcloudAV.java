@@ -20,7 +20,6 @@ import org.zywx.wbpalmstar.engine.DataHelper;
 import org.zywx.wbpalmstar.engine.EBrowserView;
 import org.zywx.wbpalmstar.engine.universalex.EUExBase;
 import org.zywx.wbpalmstar.plugin.uexqcloudav.vo.OpenVO;
-import org.zywx.wbpalmstar.plugin.uexqcloudav.vo.StartVO;
 import org.zywx.wbpalmstar.plugin.uexqcloudav.vo.VideoInfoVO;
 
 import java.util.ArrayList;
@@ -85,24 +84,14 @@ public class EUExQcloudAV extends EUExBase {
         lp.leftMargin= openVO.getX();
         lp.topMargin= openVO.getY();
         addViewToCurrentWindow(mPlayer,lp);
-    }
-
-    public void start(String[] params) {
-        if (params == null || params.length < 1) {
-            errorCallback(0, 0, "error params!");
-            return;
-        }
-        String json = params[0];
-        final StartVO startVO=DataHelper.gson.fromJson(json,StartVO.class);
-
         List<VideoInfo> videos=new ArrayList<VideoInfo>();
 
-        for (VideoInfoVO videoInfoVO:startVO.getData()){
+        for (VideoInfoVO videoInfoVO:openVO.getData()){
             videos.add(transVideoInfo(videoInfoVO));
         }
 
         mPlayer.play(videos);
-        mPlayer.seekTo(startVO.getStartSeconds());
+        mPlayer.seekTo(openVO.getStartSeconds());
         mPlayer.setToggleFullScreenHandler(new UiChangeInterface() {
             @Override
             public void OnChange() {

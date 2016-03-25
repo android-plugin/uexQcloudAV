@@ -20,6 +20,7 @@
 package org.zywx.wbpalmstar.plugin.uexqcloudav.vo;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by ylt on 16/3/21.
@@ -32,7 +33,36 @@ public class OpenVO implements Serializable {
     private int y;
     private int width;
     private int height;
+    private int startSeconds;
 
+    private int index;
+
+    private List<VideoInfoVO> data;
+
+
+    public int getStartSeconds() {
+        return startSeconds;
+    }
+
+    public void setStartSeconds(int startSeconds) {
+        this.startSeconds = startSeconds;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    public List<VideoInfoVO> getData() {
+        return data;
+    }
+
+    public void setData(List<VideoInfoVO> data) {
+        this.data = data;
+    }
     public int getX() {
         return x;
     }

@@ -22,8 +22,7 @@
     <plugin
         className="org.zywx.wbpalmstar.plugin.uexqcloudav.EUExQcloudAV" uexName="uexQcloudAV" >
         <method name="open" type="1"/>
-        <method name="start"/>
-        <method name="play"/>
+         <method name="play"/>
         <method name="pause"/>
         <method name="restore"/>
         <method name="stop"/>

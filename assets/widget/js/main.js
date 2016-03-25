@@ -19,10 +19,19 @@ window.uexOnload = function() {
 
 function openButton() {
 	var params = {
-		x: 0,
-		y: window.screen.height - 1400,
-		width: window.screen.width - 0,
-		height: 1200
+		x: 20,
+        		y: window.screen.height - 1400,
+        		width: window.screen.width - 40,
+        		height: 1200,
+            data: [{
+                   "videoType": 1,
+                   "desc": "1080p",
+                   "url": "http://2527.vod.myqcloud.com/2527_3f7c6ea2e57611e48c830517c16aa0bc.f20.mp4"
+                   }, {
+                   "videoType": 1,
+                   "desc": "蓝光",
+                   "url": "http://2527.vod.myqcloud.com/2527_3f7c6ea2e57611e48c830517c16aa0bc.f30.mp4"
+                   }]
 	};
 	var data = JSON.stringify(params);
 	uexQcloudAV.open(data);
@@ -31,7 +40,6 @@ function openButton() {
 function startButton() {
 	var params = {
 		//startSeconds : 100,//不传默认为0
-		//index : 0,//不传默认为0
 		data: [{
 			"videoType": 1,
 			"desc": "1080p",
