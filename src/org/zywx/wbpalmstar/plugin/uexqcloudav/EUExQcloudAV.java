@@ -118,7 +118,7 @@ public class EUExQcloudAV extends EUExBase {
         mPlayer.setListener(new PlayerListener() {
             @Override
             public void onError(Exception e) {
-
+                callBackPluginInt(JsConst.ON_STATE_CHANGED,-1);
             }
 
             @Override
