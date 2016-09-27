@@ -224,6 +224,9 @@ public class EUExQcloudAV extends EUExBase {
 
     public void close(String[] params) {
        if (mPlayer!=null){
+           if (mPlayer.isFullScreen()) {
+               mPlayer.toggleFullScreen();
+           }
            removeViewFromCurrentWindow(mPlayer);
            mPlayer.release();
            mPlayer=null;
