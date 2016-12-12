@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿﻿<?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexQcloudAV" version="3.3.2" build="2">
-        <info>2:解决不能退出横屏的问题</info>
-        <info>1:添加错误码</info>
-        <info>0:腾讯云视频直播插件</info>
+        uexName="uexQcloudAV" version="4.0.0" build="2">
+        <info>2:4.0插件</info>
+        <build>1:添加错误码</build>
+        <build>0:腾讯云视频直播插件</build>
     </plugin>
 </uexplugins>
